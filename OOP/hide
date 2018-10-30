@@ -1,0 +1,40 @@
+(defun same-length (list)
+  (let ((len (length lit)))
+    (list 
+
+
+(defclass hideable-picture (picture)
+  ((hide-items :initform 0)
+   (all-items :initform nil)))
+
+(defmethod set-center ((circle circle) (p point))
+  (setf (slot-value circle 'center) p))
+
+(defvar w (make-instance 'window))
+
+(defvar point1 (make-instance 'point))
+(set-x point1 50)
+(set-y point1 100)
+(defvar cir1 (make-instance 'circle))
+(set-window cir1 w)
+(set-center cir1 point1)
+(set-radius cir1 50)
+(set-thickness cir1 3)
+(set-filledp cir1 t)
+
+(defvar point2 (make-instance 'point))
+(set-x point2 200)
+(set-y point2 100)
+(defvar cir2 (make-instance 'circle))
+(set-window cir2 w)
+(set-center cir2 point2)
+(set-radius cir2 50)
+(set-thickness cir2 3)
+(set-filledp cir2 t)
+
+(defvar image (make-instance 'picture))
+(set-items image (list cir1 cir2))
+(set-window image w)
+
+
+

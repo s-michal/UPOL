@@ -1,0 +1,29 @@
+(defclass ellipse () 
+  ((focal-point1 :initform (make-instance 'point))
+   (focal-point2 :initform (make-instance 'point))
+   (major-semiaxis :initform 1)))
+
+(defmethod focal-point1 ((el ellipse))
+  (slot-value el 'focal-point1))
+
+(defmethod focal-point2 ((el ellipse))
+  (slot-value el 'focal-point2))
+
+(defmethod set-focal-point1 ((el ellipse) value)
+  (setf (slot-value el 'focal-point1) value))
+
+(defmethod set-focal-point2 ((el ellipse) value)
+  (setf (slot-value el 'focal-point2) value))
+
+(defmethod major-semiaxis ((el ellipse))
+  (slot-value el 'major-semiaxis))
+
+(defmethod set-major-semiaxis ((el ellipse) value)
+  (setf (slot-value el 'major-semiaxis) value))
+
+(defun distance (point1 point2)
+  (sqrt (+ (expt (- (x point1) (x point2)) 2)
+           (expt (- (y point1) (y point2)) 2))))
+
+(defmethod minor-semiaxis ((el ellipse))
+  (distance (focal-point1 el) (focal-point2 el)))

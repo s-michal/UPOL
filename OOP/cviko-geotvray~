@@ -1,0 +1,81 @@
+;point
+
+(defclass point ()
+  ((x :initform 0)
+   (y :initform 0)))
+
+(defmethod x ((point point))
+  (slot-value point 'x))
+
+(defmethod y ((point point))
+  (slot-value point 'y))
+
+(defmethod set-x ((point point) val)
+  (setf (slot-value point 'x) val))
+
+(defmethod set-y ((point point) val)
+  (setf (slot-value point 'y) val))
+
+(defmethod distance ((point1 point) (point2 point))
+  (sqrt (+ (expt (- (x point1) (x point2)) 2)
+           (expt (- (y point1) (y point2)) 2))))
+
+;circle
+
+(defclass circle ()
+  ((center :initform (make-instance 'point))
+   (radius :initform 0)))
+
+(defmethod center ((circle circle))
+  (slot-value circle 'center))
+
+(defmethod radius ((circle circle))
+  (slot-value circle 'radius))
+
+(defmethod set-center ((circle circle) arg)
+  (setf (slot-value circle 'center) arg))
+
+(defmethod set-radius ((circle circle) arg)
+  (setf (slot-value circle 'radius) arg))
+
+(defmethod distance ((circle circle) point)
+  (abs (- (distance (center circle) point) 
+     (radius circle))))
+
+(defmethod area ((circle circle))
+  (* pi (expt (radius circle) 2)))
+
+;line
+
+(defclass line ()
+  ((A :initform (make-instance 'point))
+   (B :initform (make-instance 'point))))
+
+(defmethod A ((line line))
+  (slot-value line 'A))
+
+(defmethod B ((line line))
+  (slot-value line 'B))
+
+(defmethod set-A ((line line) arg)
+  (setf (slot-value line 'A) arg))
+
+(defmethod set-B ((line line) arg)
+  (setf (slot-value line 'A) arg))
+
+(defmethod size ((line line))
+  (distance (A line) (B line)))
+
+
+
+
+
+
+
+
+
+
+
+
+
+

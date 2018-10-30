@@ -1,0 +1,15 @@
+C:\Users\domin\source\repos\csharp_2\csharp_2\bin\Debug\csharp_2.exe.config
+C:\Users\domin\source\repos\csharp_2\csharp_2\bin\Debug\csharp_2.exe
+C:\Users\domin\source\repos\csharp_2\csharp_2\bin\Debug\csharp_2.pdb
+C:\Users\domin\source\repos\csharp_2\csharp_2\obj\Debug\csharp_2.csprojResolveAssemblyReference.cache
+C:\Users\domin\source\repos\csharp_2\csharp_2\obj\Debug\MainWindow.g.cs
+C:\Users\domin\source\repos\csharp_2\csharp_2\obj\Debug\App.g.cs
+C:\Users\domin\source\repos\csharp_2\csharp_2\obj\Debug\csharp_2_MarkupCompile.cache
+C:\Users\domin\source\repos\csharp_2\csharp_2\obj\Debug\csharp_2_MarkupCompile.lref
+C:\Users\domin\source\repos\csharp_2\csharp_2\obj\Debug\MainWindow.baml
+C:\Users\domin\source\repos\csharp_2\csharp_2\obj\Debug\csharp_2.g.resources
+C:\Users\domin\source\repos\csharp_2\csharp_2\obj\Debug\csharp_2.Properties.Resources.resources
+C:\Users\domin\source\repos\csharp_2\csharp_2\obj\Debug\csharp_2.csproj.GenerateResource.cache
+C:\Users\domin\source\repos\csharp_2\csharp_2\obj\Debug\csharp_2.csproj.CoreCompileInputs.cache
+C:\Users\domin\source\repos\csharp_2\csharp_2\obj\Debug\csharp_2.exe
+C:\Users\domin\source\repos\csharp_2\csharp_2\obj\Debug\csharp_2.pdb

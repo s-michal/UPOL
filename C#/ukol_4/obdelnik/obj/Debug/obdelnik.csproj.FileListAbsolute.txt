@@ -1,0 +1,7 @@
+C:\Users\domin\source\repos\obdelnik\obdelnik\bin\Debug\obdelnik.exe.config
+C:\Users\domin\source\repos\obdelnik\obdelnik\bin\Debug\obdelnik.exe
+C:\Users\domin\source\repos\obdelnik\obdelnik\bin\Debug\obdelnik.pdb
+C:\Users\domin\source\repos\obdelnik\obdelnik\obj\Debug\obdelnik.csprojAssemblyReference.cache
+C:\Users\domin\source\repos\obdelnik\obdelnik\obj\Debug\obdelnik.csproj.CoreCompileInputs.cache
+C:\Users\domin\source\repos\obdelnik\obdelnik\obj\Debug\obdelnik.exe
+C:\Users\domin\source\repos\obdelnik\obdelnik\obj\Debug\obdelnik.pdb

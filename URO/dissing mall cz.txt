@@ -1,0 +1,20 @@
+---------------------------------
+- slideshow - uživatel se nikdy nesoustøedí na to, co se hýbe, automaticky to ignoruje a považuje za reklamu, navíc velkou èást pøekrývá právì menu, které nejde skrýt
+- 3 barvy menu pro 2 stavy, drop-down forced menu, kde musíte pøesnì vìdìt, co hledáte,
+- šedý stav vypadá spíše jako nápovìda k menu, než menu 
+- reklamy úplnì všude, v menu, doporuèení, mohlo by se vám hodit, vybrali jsme pro vás (extrém), doporuèí vám další produkt ještì pøed tím, než se stihnete podívat na parametry jednoho 
+
+- v popisu moc dlouhý øádek, mám být max 70 znakù, špatná èitelnost, jiný styl popisku snad u každého produktu
+
+ *Alliance Healthcare Biodeur 
+	vs
+ *Apple Iphone 7 32gb
+
+- pøi pøekliku ze shrnutí objednávky je tøeba vše vyplnit úplnì od zaèátku, nelze se zpìtnì podívat na produkt, který si kupuju 
+
+++++++++++++++++++++++++++++++++
+- responzitvita, mobilní verze 
+- ukazující se menu v mobilní verzi, snadné vrácení na zaèátek, 
+- pøehledná drobeèková navigace
+- mapa mall.cz
+- pomìrnì rychlé naèítání

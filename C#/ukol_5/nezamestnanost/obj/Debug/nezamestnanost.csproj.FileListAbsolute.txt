@@ -1,0 +1,7 @@
+C:\Users\domin\source\repos\nezamestnanost\nezamestnanost\bin\Debug\nezamestnanost.exe.config
+C:\Users\domin\source\repos\nezamestnanost\nezamestnanost\bin\Debug\nezamestnanost.exe
+C:\Users\domin\source\repos\nezamestnanost\nezamestnanost\bin\Debug\nezamestnanost.pdb
+C:\Users\domin\source\repos\nezamestnanost\nezamestnanost\obj\Debug\nezamestnanost.csprojAssemblyReference.cache
+C:\Users\domin\source\repos\nezamestnanost\nezamestnanost\obj\Debug\nezamestnanost.csproj.CoreCompileInputs.cache
+C:\Users\domin\source\repos\nezamestnanost\nezamestnanost\obj\Debug\nezamestnanost.exe
+C:\Users\domin\source\repos\nezamestnanost\nezamestnanost\obj\Debug\nezamestnanost.pdb

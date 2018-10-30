@@ -1,0 +1,15 @@
+C:\Users\domin\source\repos\primes\primes\obj\Debug\primes.csprojAssemblyReference.cache
+C:\Users\domin\source\repos\primes\primes\obj\Debug\MainWindow.g.cs
+C:\Users\domin\source\repos\primes\primes\obj\Debug\App.g.cs
+C:\Users\domin\source\repos\primes\primes\obj\Debug\primes_MarkupCompile.cache
+C:\Users\domin\source\repos\primes\primes\obj\Debug\primes_MarkupCompile.lref
+C:\Users\domin\source\repos\primes\primes\bin\Debug\primes.exe.config
+C:\Users\domin\source\repos\primes\primes\bin\Debug\primes.exe
+C:\Users\domin\source\repos\primes\primes\bin\Debug\primes.pdb
+C:\Users\domin\source\repos\primes\primes\obj\Debug\MainWindow.baml
+C:\Users\domin\source\repos\primes\primes\obj\Debug\primes.g.resources
+C:\Users\domin\source\repos\primes\primes\obj\Debug\primes.Properties.Resources.resources
+C:\Users\domin\source\repos\primes\primes\obj\Debug\primes.csproj.GenerateResource.cache
+C:\Users\domin\source\repos\primes\primes\obj\Debug\primes.csproj.CoreCompileInputs.cache
+C:\Users\domin\source\repos\primes\primes\obj\Debug\primes.exe
+C:\Users\domin\source\repos\primes\primes\obj\Debug\primes.pdb

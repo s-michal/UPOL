@@ -1,0 +1,8 @@
+(defun isPrime (num)
+  (cond ((<= num 1) (print "nope"))
+        ((= num 2) (print "yeah"))
+        ((> num 2)
+         (loop
+          (let ((x num))
+            (if (= (mod x num) 0)
+                

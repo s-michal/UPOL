@@ -1,0 +1,97 @@
+1. Jaký je rozdíl mezi syntaxí a sémantikou programu? 
+2. Jak v jazyku Scheme zapisujeme seznamy? 
+3. Z èeho se skládají programy v jazyku Scheme?
+4. Jak probíhá vyhodnocení symbolických výrazù?
+5. Co máme na mysli pod pojmem aplikace procedur?
+6. Jaký je rozdíl mezi procedurami a speciálnimi formami?
+7. Proè nemùže být define procedura? 
+8. Co je aktuální vazba symbolu? 
+9. Jaké znáte typy chyb a jaký je mezi nimi rozdíl? 
+10. Co jsou to predikáty? 
+11. Z jakých èástí se skládá cyklus REPL? 
+12. Jaké má výhody prefixová notace výrazù? 
+
+13. Co jsou to lambda výrazy a jak vypadají? 
+14. Co vzniká vyhodnocením lambda výrazù? 
+15. Jaké mají prostøední mezi sebou vazby? 
+16. Jak vznikají prostøedí? 
+17. Jak se zmìní vyhodnocování, pokud jej uvažujeme vzhledem k prostøedím?
+18. Co jsou a jak jsou reprezentovány uživatelsky definované procedury?
+19. Jak probíhá aplikace uživatelsky definované procedury? 
+20. Co jsou to procedury vyšších rádù? 
+	- procedury, které ve svém tìle mají další proceduru, nebo ji pøíjmají jako argument
+21. Jaký mají vztah procedury a matematické funkce?
+	- nìkteré procedury se dají chápat jako zobrazení, protože vždy pro daný vstup vrací daný výsledek (pro každé x existuje právì jedno y)
+22. Co máme na mysli pod pojmem monoidální operace?
+	- operace, které spolu s množinou na níž jsou definované a se svým neutrálním prvkem tvoøí 	monoid + asociativní
+23. Co v jazyku Scheme považujeme za elementy prvního øádu? 
+	- každý element jazyka, pro který platí: 
+	- mùže být pojmenován, pøedán proceduøe jako argument, vzniknout aplikací procedury, mùže 	být obsažen v hierarchickcých datových strukturách
+24. Jaký je rozdíl mezi lexikálním a dynamickým rozsahem platnosti? 
+	- LEXIKÁLNÍ = vazby symbolù se hledají v prostøedí vzniku procedur
+	- DYNAMICKÝ = vazby symbolù se hledají v prostøedí odkud byla procedura aplikována
+25. Jaké má výhody lexikální rozsah platnosti? 
+	- mnohem jednodušší najít pøedka a vyèíst strukturu programu
+26. Jaké má nevýhody dynamický rozsah platnosti? 
+ 	- struktura programu je dána až samotným výpoèetním procesem
+ 	- nadøazené prostøedí není urèeno jednoznaènì
+27. Jak by se dal upravit náš interpret tak, aby pracoval s dynamickým rozsahem platnosti?
+	- Staèilo by uvažovat UDP pouze jako elementy tvoøené dvojící ve tvaru <<parametry>, <tìlo>>, aplikaci procedury uvažovat relativnì k prostøedí, ve kterém ji chceme provést a pozmìnit Eval
+
+28. Co jsou lokální vazby? K èemu jsou dobré? 
+29. Proè nemohou být let a let* procedury? 
+30. Jak probíhá aplikace formy let a let*?
+31. Co jsou interní definice, jak se liší od top-level definic? 
+	- top-level  = definice v globálním prostøedí
+	- interní = ????
+
+32. Co je datová abstrakce? 
+33. Jak jsou definovány seznamy? 
+	- seznam je výraz, ve kterém je na prvním místì libovolný element a na druhém místì seznam
+34. Co je to garbage collector? 
+	-podprogram, který se stará o správu pamìtí
+35. Jaký je ve Scheme vztah mezi programy a daty?
+	- program chápe jako data
+36. Popište algoritmy práce garbage collectoru.
+	- mark = projde se pøes dosažitelné elementy od globálu, pokud právì oznaèený element ukazuje na další elementy, budou zpracovány, postupuje se, dokud je co oznaèovat
+	- sweep = pokud má element znaèku, smaže ji a pokraèuje dalším elementem
+		pokud element znaèku nemá, pak je element odstranìn z pamìti
+37. Jaký je rozdíl mezi silnì a slabì typovaným jazykem? 
+	- SILNÌ = pro každou operaci jsou pøesnì vymezené TYPY argumentù, když jsou jiné chyba
+	- SLABÌ = pokud je provedena operace s argumenty, které jí typovì neodpovídají, je provedena konverze typù tak, aby byla operacec proveditelná
+38. Jaký je rozdíl mezi staticky a dynamicky typovaným jazykem? 
+	- STATICKÝ = jazyky, pro které je z principu možné udìlat kontrolu typù již pøed interpretací nebo bìhem pøekladu programu, pouze na základì znalostí jeho syntaktické struktury (C)
+	- DYNAMICKÝ = struktura nestaèí ke kontrole, jsou kontrolovány až za bìhu programu, jedno jméno mùže bìhem života programu nést hodnoty rùzných typù (Scheme)
+39. Jaký je rozdíl mezi bezpeènì a nebezpeènì typovaným jazykem?
+	- NEBEZPEÈNÌ = výsledek operace mezi rùznými typy mùže vést k chybì pøi bìhu programu (C), pád programu
+	- BEZPEÈNÉ = je zajištìno, že pokud je operace proveditelná, tak vždy bude operace úspìšnì dokonèena, program nespadne
+40. Jaký je rozdíl mezi implicitní a expliticní aplikací procedury?
+	- IMPLICITNÍ = nejprve se musí vyhodnotit prvky aby se mohly použít jako argumenty procedury - aplikace je provádìna implicitnì bìhem vyhodnocování elementù
+	- EXPLICITNÍ = argumenty už jsou k dispozici a nechceme je získávat vyhodnocením
+
+
+
+top-down = program se rozdìlí do samostatných èástí, které se pak øeší samostatnì
+bottom-up = program se vytváøí po vrstvách, nejnižší vrstvou je sám jazyk, nad ním je druhá vrsta, která obsahuje nové definované procedury øešící jistou tøídu problémù... = obohacovat samotný jazyk
+líné vyhodnocování = nemusí mít rekurzivní podmínku
+èistý jazyk = pokud lze každou primitivní proceduru považovat jako zobrazení a v jazyku nelze vytvoøit proceduru, která by zobrazení nereprezentovala
+dekompozice = rozložení problému na menší podproblémy
+
+iterativní procedury = generují pouze iterativní procesy
+iterativní proces = proces generovaný koncovì rekurzivními procedurami, procedura je aplikována z koncové pozice, fáze zpìtného navíjení je triviální, nevznikají prostøedí, jen se mìní vazba symbolù
+
+rekurzivní procedury = generují rekurzivní procesy
+rekurzivní proces = má netriviální fáze navíjení a odvíjení, bìhem navíjení se budume série odložených výpoètù, pøi každé aplikaci procedury vznikají prostøedí, pak se hledá vazba symbolu v daném prostøedí pøi odvíjení
+
+stromovì rekurzivní proces  = když se rekurzivnì volá procedura v tìle vícekrát, vytváøí se stromová struktura, fáze navíjení a odvíjení
+
+
+41. Jaký je rozdíl mezi matematickou a strukturální indukcí? 
+42. Co znamená, že je seznam strukturálnì jednoduší než jiný seznam? 
+43. Je Scheme èistý funkcionální jazyk? 
+44. Jakým zpùsobem lze vždy nahradit rekurzivní proceduru iterativní procedurou? 
+45. proè if jako procedura nezastaví rekurzi? 
+
+logický poèet atomù  = v externí reprezentaci
+fyzický poèet atomù = v interní reprezentaci 
+ 

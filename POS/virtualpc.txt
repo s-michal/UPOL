@@ -1,0 +1,29 @@
+/home/students/virtual/POS/linux.qcow (or windows.qcow)
+virtualpc-createdisk obraz 10G
+virtualpc-createdisk obraz baze (baze = linuq.qcow)
+virtualpc obraz [nowrite]
+
+ctrl + alt + f = fullscreen
+
+virtualWS2012
+
+adduser oliver
+
+ip 10. 1. 0. 0/16
+255.255.0.0
+
+vpc bude mít adresy 10.1.L.1 (2, 3)
+172.16.0.255 = adresa hostitelského poèítaèe
+
+nano, vi, vim, cat, head, tail
+su = zmìna uživatele
+ifconfi, ip addr
+ssh uzivatel@ipadresa
+scp (kopírování kam) soubor uzivatel@adresa:/adresa/na/serveru
+scp uzivatel@adresa:/adresa/na/serveru lokalni/adresa
+
+(z virt1 do virt2 píšu do virt1 : 
+	scp me.txt root@10.1.234.1:/home))
+naopak
+
+(scp sustmi@172.16.0.254:/adresa souboru /root (místo uložení))

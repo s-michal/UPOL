@@ -1,0 +1,49 @@
+(define proc
+    (lambda (x y)
+      (let ((out 0)
+            (stav 0))
+      (if (>= stav 0)
+          (begin
+            (set! stav (+ stav 1))
+            (set! out (* x y))
+           (display "counter is ")
+           (display stav)
+           (newline)
+           (display "result is: ")
+           (display out)
+           (newline))
+          0))))
+
+;(proc 5 4)
+;(proc 4 6)
+;(proc 1 2)
+
+;(for-each
+ ; (lambda (x)
+  ;  (display "cislo: ")
+   ; (display x)
+    ;(newline))
+  ;'(1 2 3 4))
+
+;(let ((i 0))
+ ; (for-each
+  ; (lambda (x)
+   ;  (display (list i x))
+    ; (newline)
+     ;(set! i (+ i 1)))
+     ;'(a b c d e f)))
+(define value 10)
+
+(define inc
+  (lambda (x)
+     (set! value (+ value x))
+      value))
+
+(fluid-let ((value 20))
+  (display (inc 10))
+  (newline)
+  (display (inc 10))
+  (newline))
+
+value
+  

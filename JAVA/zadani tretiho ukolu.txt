@@ -1,0 +1,3 @@
+implementovat collection (všechny abstraktní metody)
++ naplnìní binary tree 100K random hodnot a zkusit porovnat 
+average u klasického streamu a u paralelního streamu (èasy)

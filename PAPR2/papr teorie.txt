@@ -1,0 +1,52 @@
+- Vedlejší efekty:
+ 	- zmìna vazby symbolu
+	- vstupnì / výstupní operace
+ 	- destruktivní zmìna datové struktury
+- Funkcionálnì èistý jazyk je takový, který neumožòuje vytvoøit vedlejší efekt
+- Reentrantní procedura: 
+	- procedura, která mùže být pøerušena bìhem jejího vykonávání a potom bezpeènì vyvolána znovu pøedtím, než to pøedchozí vykonávání skonèí (rekurze)
+-Objektové paradigma
+	- programátor spravuje systém elementù (objektù), které  mají svùj stav
+	- výpoèet je založen na interakci objektù a zmìnì jejich stavù (založeno na zasílání signálù)
+- Oboursmìrné seznamy: speciální cyklické struktury
+ 	- ve tvaru (elem . (ptr1 . ptr2)), kde ptr1 je odkaz na pøedchozí buòku a ptr2 na následující
+-metody pøedávání argumentù procedurám
+	- Volání hodnotou (Scheme, proceduøe jsou pøedány R-hodnoty argumentù, jsou uchovávány v prostøedí, procedura nemùže pøiøazovat hodnoty pøes argumenty)
+	- Volání odkazem (c++, jsou pøedány L-hodnoty (odkazy), pøiøazení do promìné v tìle procedury mìní hodnotu v argumentu v prostøedí, ze kterého byla volána
+	- Volání hodnotou-výsledkem (jako odkazem, ale hodnoty jsou uchovávány v lokálním prostøedí a až po dokonèení výpoètu se provede kopie lokálnì uložených hodnot)
+	- Volání jménem (proceduøe jsou pøedána jména argumentù, ty se pokaždé vyhodnotí pøi jejich zavolání)
+
+-transformace = makroexpanze
+
+MAKRA
+I. pohled = "rozšíøení syntaxe jazyka
+	- po naètení výrazu je provedena makroexpanze (preprocesor)
+	- až po dokonèení expanze všech maker dojde k vyhodnocování
+	- preprocesor a eval jsou nezávislé
+	- snadná kompilace kódu
+	- nejsou elementy prvního øádu
+II. pohled = "speciální elementy jazyka"
+	- makro = element jazyka, který obsahuje odkaz na transformaèní proceduru
+	- t.p = normální procedura
+	- tøeba rozšíøit eval (nejprve se aplikuje t.p s nevyhodnocenými argumenty, poté dojde k vyhodnocení aplikace v prostøedí P)
+	- uživatelsky definované speciální formy
+	- procedury I. øádu
+	- makra jako "data", mohou dynamicky vznikat / zanikat bìhem programu
+ 	- neúèinná kompilace
+	- k makroexpanzi dochází až pøi èinnosti eval
+
+- transformaèní procedura makra se neaplikuje v prostøedí svého vzniku, ale v prostøedí poèáteèních vazeb
+- poèáteèní prostøedí vazeb = nelze v nìm definovat vazby (není to globální)
+- hygienická makra - jsou v souladu s lexikálním rozsahem platnosti a lze je definovat lokálnì
+- pøi vyhodnocování tìla makra se vazby všech volných výskytù (saymboly, které nebyly vytvoøené lokálnì v makru) hledají v prostøedí definice (lexikální pøedek)
+-implicitní definice proudu = definice, která v sobì používá proud, který sama definuje
+
+-AKTUÁLNÍ POKRAÈOVÁNÍ
+ 	-Kontext = procedura jednoho argumentu, která reprezentuje výpoèet, který by nastal po vyhodnocení jistého výrazu, který se dosadí za argument
+	- úniková procedura - procedura, po jejíž aplikaci se okamžitì ukonèí zbylý výpoèet a vrátí se hodnota její aplikace
+	- A.P = úniková procedura vytvoøená z kontextu aktuálního výrazu
+
+
+
+korutiny = podprogramy, které se vzájemnì pøepínají 
+nedeterminismus = nedeterministický operátor amb vrací jeden z vyhodnocených argumentù, pøitom mu jde o to najít aspoò jedno øešení

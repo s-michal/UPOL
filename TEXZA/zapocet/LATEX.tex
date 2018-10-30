@@ -1,0 +1,140 @@
+\documentclass[titlepage, a4paper, 12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyvrb}
+\usepackage{xcolor}
+\usepackage{color}
+\usepackage{listings}
+\usepackage{mathtools} 
+\usepackage{amsmath} 
+\usepackage{graphicx}
+
+
+
+\begin{document}
+\begin{titlepage}
+   \vspace*{\stretch{2.0}}
+   \begin{flushleft}
+      \Huge\textbf{\LaTeX}\\
+      \Large\textit{and what I can do in it}\\
+      \vspace{10pt}
+      \normalsize{Dominika Gajdová}\\
+      \today\\
+   \end{flushleft}
+   \vspace*{\stretch{2.0}}
+\end{titlepage}
+
+
+\parindent=0cm
+
+\newpage
+
+
+
+\tableofcontents
+\newpage
+\section{Programming}
+As a computer science major, I should be able to project any piece of code I~find necessary. 
+
+\subsection{C language}
+Here is a function for returning the maximum of two values written in good old C: 
+    
+
+\begin{lstlisting}[language = C]
+
+int max(int a, int b){	
+if (a > b)
+   return a;
+else if (a == b)
+   return printf("equal");
+else
+   return b;
+}
+\end{lstlisting}
+
+If you want to call the function with given parametres, you do it like this: 
+
+\begin{lstlisting}
+max(10, 20)   -> 20
+max(14, 14)   -> equal
+\end{lstlisting}
+
+\subsection{Scheme}
+What about a recursive procedure for calculating the value of factorial 
+
+in~Scheme?\\
+
+
+\begin{lstlisting}[language=Lisp]
+(define fac
+   (lambda (n)
+      (if (= n 0)
+         1
+         (* n (fac (- n 1))))))
+\end{lstlisting}
+
+If you want to call the function with a given parametre, you do it like this: 
+
+\begin{lstlisting}
+(fac 4)  -> 24
+(fac 5)  -> 120
+\end{lstlisting}
+\newpage
+
+\section{Math}
+Because I study computer science, I have to have some mathematical skills otherwise I would not be able to write a recursive procedure for getting the~value of a factorial.
+
+\subsection{Analytical geometry}
+How do I calculate the length of a side of a 2d object if I only know the~coordinates? That's easy: 
+
+$$|AB|= B-A = \sqrt{(v_1-u_1)^2 + (v_2-u_2)^2}$$\\
+$A$, $B$ are points of the abscissa and $v_1$, $v_2$, $u_1$, $u_1$, are vectors.\\
+The area of a triangle with vertices at $(x_1, y_1) , (x_2, y_2), (x_3, y_3)$ is:
+$$=\pm\frac{1}{2}\begin{bmatrix} 
+x_1 & y_1 & 1 \\
+x_2 & y_2 & 1 \\  
+x_3 & y_3 & 1
+\end{bmatrix} 
+$$
+$$=\pm y_2(x_1y_2 + y_1x_3 +y_3x_2 - y_2x_3 - y_1x_2 - x_1y_3)$$
+
+
+\subsection{Factorial}
+Everyone knows that the way to calculate a factorial of a number is to multiply all the descending numbers beginning with the wanted number. \\
+For example:
+
+$$5! = 5\cdot4\cdot3\cdot2\cdot1=120$$
+
+So the slightly more mathematical way of saying this is:
+
+$$n! = n(n-1)! $$
+
+Math would not be math without another mathematical definiton, right? 
+This is a recursive\footnote{A recursive procedure is a procedure that is applied within itself when defining it.} definition of a factorial:
+
+\[
+  Fac(n) =
+  \begin{cases}
+                                   1 & \text{if $n=0$} \\                                   
+  n \cdot Fac(n -1) & \text{if $n>1$}
+  \end{cases}
+\]
+\newpage
+
+\section{Images}
+Inserting images is quite necessarry nowadays. How would a document look with only math and coding? I'm not writing a boring textbook.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.26]{samsung}
+\caption{A flat design of Samsung Galaxy 9}
+\end{figure}
+
+Both designs were made in Adobe Illustrator.
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.26]{watches}
+\caption{A flat design of watches}
+\end{figure}
+
+
+\end{document}
