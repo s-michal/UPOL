@@ -217,7 +217,7 @@ set-items crossroads items      Navíc se nastaví vlastnost semaphores na hodno
          (setf semaphores (cons item semaphores))))
     (setf (slot-value cr 'semaphores) semaphores)))
 
-#|(defmethod move-semaphores ((cr crossroads))
+(defmethod move-semaphores ((cr crossroads))
   (let ((items (semaphores cr))
         (move-x 70))
     (dolist (sem (cdr items))
@@ -225,9 +225,9 @@ set-items crossroads items      Navíc se nastaví vlastnost semaphores na hodno
      (setf move-x (+ move-x 70)))
     cr))
 
-|#
 
-(defmethod move-semaphores ((cr crossroads))
+
+#|(defmethod move-semaphores ((cr crossroads))
   (let ((items (semaphores cr))
         (angle 90)
         (center (make-instance 'point)))
@@ -238,6 +238,7 @@ set-items crossroads items      Navíc se nastaví vlastnost semaphores na hodno
      (rotate sem angle center)
      (setf angle (+ angle 90))))
     cr)
+|#
 
 (defmethod set-items ((cr crossroads) value)
   (call-next-method)

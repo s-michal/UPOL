@@ -54,7 +54,8 @@ set-items crossroads items      Navíc se nastaví vlastnost semaphores na hodno
 
 (defvar *types*
   '((:pedestrian (:red :green) ((t nil) (nil t)))
-    (:vehicle (:red :orange :green) ((t nil nil) (t t nil) (nil nil t) (nil t nil)))))
+    (:vehicle (:red :orange :green) ((t nil nil) (t t nil) (nil nil t) (nil t nil)))
+    (:random (:red :blue :green :purple :yellow) ((t nil nil nil nil) (nil t nil nil nil) (nil nil t nil nil) (nil nil nil t nil) (nil nil nil nil t)))))
 
 (defclass semaphore (picture)
   ((semaphore-type :initform :vehicle)
@@ -89,7 +90,9 @@ set-items crossroads items      Navíc se nastaví vlastnost semaphores na hodno
   (call-next-method)
   (build-semaphore sem))
 
+;;;;;;;;
 ;;;;;Pomocné funkce pro tvorbu semaforu
+;;;;;;;;
 
 (defun make-polygon (num)
   (let ((rect (make-instance 'polygon))
@@ -124,8 +127,6 @@ set-items crossroads items      Navíc se nastaví vlastnost semaphores na hodno
       (car list)
     (return-type type (cdr list))))
 
-;;;;;Vytvoří a vrátí obrázek semaforu
-
 (defmethod build-semaphore ((sem semaphore))
   (let ((list (return-type (semaphore-type sem) *types*)))
          (set-items sem (make-semaphore (length (second list))
@@ -143,7 +144,8 @@ set-items crossroads items      Navíc se nastaví vlastnost semaphores na hodno
          (on-and-off (nth (semaphore-phase sem) (third list))))
     (mapcar (lambda (x y) (if x 
                               (set-on y)
-                            (set-off y))) on-and-off lights))
+                            (set-off y))) on-and-off lights)
+    (set-phase-count sem (length (third list))))
   sem)
 
 (defmethod next-phase ((sem semaphore))
