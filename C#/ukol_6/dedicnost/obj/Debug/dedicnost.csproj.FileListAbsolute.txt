@@ -1,0 +1,7 @@
+C:\Users\domin\source\repos\dedicnost\dedicnost\bin\Debug\dedicnost.exe.config
+C:\Users\domin\source\repos\dedicnost\dedicnost\bin\Debug\dedicnost.exe
+C:\Users\domin\source\repos\dedicnost\dedicnost\bin\Debug\dedicnost.pdb
+C:\Users\domin\source\repos\dedicnost\dedicnost\obj\Debug\dedicnost.csprojAssemblyReference.cache
+C:\Users\domin\source\repos\dedicnost\dedicnost\obj\Debug\dedicnost.csproj.CoreCompileInputs.cache
+C:\Users\domin\source\repos\dedicnost\dedicnost\obj\Debug\dedicnost.exe
+C:\Users\domin\source\repos\dedicnost\dedicnost\obj\Debug\dedicnost.pdb
