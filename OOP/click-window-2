@@ -1,0 +1,24 @@
+(defclass click-window-2 (window)
+  ((poly-items :initform nil)))
+
+(defun make-polygon (x-list y-list filledp closedp color)
+  (set-closedp (set-filledp
+                (set-color
+                 (set-items (make-instance 'polygon)
+                            (mapcar 'make-point x-list y-list))
+                 color)
+                filledp)
+               closedp))
+
+(defmethod set-poly-items ((c click-window-2) items)
+  (setf (slot-value c 'poly-items) items))
+
+(defmethod initialize-instance ((c click-window-2) &key)
+  (call-next-method)
+  (set-poly-items c (make-instance 'polygon)))
+
+(defmethod window-mouse-down ((c click-window-2) button position)
+  (print button)
+  (print position))
+
+

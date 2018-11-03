@@ -91,9 +91,7 @@ set-items crossroads items      Navíc se nastaví vlastnost semaphores na hodno
   (call-next-method)
   (build-semaphore sem))
 
-;;;;;;;;
 ;;;;;Pomocné funkce pro tvorbu semaforu
-;;;;;;;;
 
 (defun make-polygon (num)
   (let ((rect (make-instance 'polygon))
@@ -128,16 +126,8 @@ set-items crossroads items      Navíc se nastaví vlastnost semaphores na hodno
       (car list)
     (return-type type (cdr list))))
 
-(defmethod build-semaphore ((sem semaphore))
-  (let ((list (return-type (semaphore-type sem) *types*)))
-         (set-items sem (make-semaphore (length (second list))
-                                        (second list)))
-         (phases sem)))
-
 (defmethod lights ((sem semaphore))
-  (let* ((items (reverse (items sem)))
-         (lights (cdr items)))
-   lights))
+  (butlast (items sem)))
 
 (defmethod phases ((sem semaphore))
   (let* ((list (return-type (semaphore-type sem) *types*))
@@ -155,15 +145,23 @@ set-items crossroads items      Navíc se nastaví vlastnost semaphores na hodno
     (set-semaphore-phase sem (+ (semaphore-phase sem) 1)))
   sem)
 
+;;;;;Vytvoří semaphore v dané fázi
+
+(defmethod build-semaphore ((sem semaphore))
+  (let ((list (return-type (semaphore-type sem) *types*)))
+         (set-items sem (make-semaphore (length (second list))
+                                        (second list)))
+         (phases sem)))
+
 ;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;CROSSROADS;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;
 
 (defclass crossroads (picture)
-  ((semaphores :initform '())
+  ((semaphores :initform nil)
    (crossroads-phase :initform 0)
    (phase-count :initform 0)
-   (program :initform '())))
+   (program :initform nil)))
 
 (defmethod semaphores ((cr crossroads))
   (slot-value cr 'semaphores))
@@ -206,24 +204,15 @@ set-items crossroads items      Navíc se nastaví vlastnost semaphores na hodno
          (setf semaphores (cons item semaphores))))
     (setf (slot-value cr 'semaphores) semaphores)))
 
-(defmethod move-semaphores ((cr crossroads))
-  (let ((items (semaphores cr))
-        (move-x 70))
-    (dolist (sem (cdr items))
-     (move sem move-x 0)
-     (setf move-x (+ move-x 70)))
-    cr))
-
 (defmethod set-phases ((cr crossroads))
   (let ((phases (return-list (crossroads-phase cr) (program cr)))
         (sems (semaphores cr)))
-    (mapcar (lambda (x y) (set-semaphore-phase x y)) sems phases)
-    (move-semaphores cr)))
+    (mapcar (lambda (x y) (set-semaphore-phase x y)) sems phases))
+  cr)
 
 (defmethod set-items ((cr crossroads) value)
   (call-next-method)
-  (read-semaphores cr)
-  (move-semaphores cr))
+  (read-semaphores cr))
 
 (defmethod next-phase ((cr crossroads))
   (if (= (crossroads-phase cr) (- (phase-count cr) 1))

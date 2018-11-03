@@ -1,0 +1,6 @@
+\select@language {czech}
+\contentsline {section}{\numberline {1}\IeC {\'U}loha batohu}{2}
+\contentsline {subsection}{\numberline {1.1}Formulace pomoc\IeC {\'\i } line\IeC {\'a}rn\IeC {\'\i }ho programov\IeC {\'a}n\IeC {\'\i }}{2}
+\contentsline {subsection}{\numberline {1.2}Pseudopolynomi\IeC {\'a}ln\IeC {\'\i } algoritmus}{2}
+\contentsline {subsection}{\numberline {1.3}Slo\IeC {\v z}itost algoritmu}{3}
+\contentsline {subsection}{\numberline {1.4}P\IeC {\v r}\IeC {\'\i }klad}{3}
